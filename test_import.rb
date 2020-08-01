@@ -44,5 +44,5 @@ gems.each do |dep|
   end
 end
 
-warning 'Failed to load the following gems:'
+warning 'Failed to load the following gems:' unless failures.empty?
 failures.each { |gem| debug "  #{gem}" }

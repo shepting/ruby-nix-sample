@@ -24,42 +24,11 @@ log
 
 log 'Checking all gems'
 gems = %w[
-  activesupport
-  aws-sdk-s3
   buildkit
-  cocoapods
   colorize
   dogapi
   faraday
   fastlane
-  fastlane-plugin-appcenter
-  google_drive
-  google-api-client
-  highline
-  htmlentities
-  jwt
-  mustache
-  nokogiri
-  octokit
-  os
-  parallel
-  pry
-  pry-rescue
-  pry-stack_explorer
-  rake
-  redcarpet
-  rspec
-  rubocop
-  ruby-graphviz
-  rubyzip
-  slack-notifier
-  slack-ruby-client
-  tty-prompt
-  tzinfo
-  vcr
-  xcodeproj
-  xcpretty
-  xml-simple
 ]
 failures = []
 # Load multiple dependencies from apps/Gemfile
@@ -75,5 +44,5 @@ gems.each do |dep|
   end
 end
 
-warning 'Failed to log the following gems:'
+warning 'Failed to load the following gems:'
 failures.each { |gem| debug "  #{gem}" }

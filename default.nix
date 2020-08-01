@@ -20,9 +20,9 @@ let
   gems = import ./default_gems.nix; #Gems from gemset.nix built by bundix
 in
 
-pkgs.stdenv.mkDerivation rec {
+pkgs.mkShell rec {
   name = "dev-derivation";
-  version = "0.2.0";
+  version = "0.3.0";
   buildInputs = [
     # Ruby
     pkgs.bundix

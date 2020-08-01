@@ -13,9 +13,9 @@ in
     #   <repo>: nixpkgs-channels
     #   <rev>: 22a3bf9fb9edad917fb6cd1066d58b5e426ee975
     # so the command looks like:
-    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs-channels/archive/22a3bf9fb9edad917fb6cd1066d58b5e426ee975.tar.gz
+    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs-channels/archive/a45f68ccac476dc37ddf294530538f2f2cce5a92.tar.gz
     import (defaultPkgs.fetchFromGitHub { owner = "NixOS";
         repo = "nixpkgs-channels";
-        rev = "22a3bf9fb9edad917fb6cd1066d58b5e426ee975";
-        sha256 = "089hqg2r2ar5piw9q5z3iv0qbmfjc4rl5wkx9z16aqnlras72zsa";
+        rev = "a45f68ccac476dc37ddf294530538f2f2cce5a92";
+        sha256 = "0i19mrky9m73i601hczyfk25qqyr3j75idb72imdz55szc4vavzc";
     }) {}

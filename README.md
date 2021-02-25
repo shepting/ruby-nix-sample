@@ -8,7 +8,7 @@ There exists a `test_nix.sh` file which shows the current issues with this setup
 
 You can see that the `ruby_info.sh` script prints out where `ruby` and `bundler` are coming from to help debug issues. You can see that there are a few gems that are failing to load, although I don't know the root cause:
 
-![Image of gem loading issue](https://github.com/shepting/ruby-nix-sample/blob/master/images/load_error.png?raw=true)
+![Image of gem loading issue](https://github.com/shepting/ruby-nix-sample/blob/master/images/load_errors.png?raw=true)
 
 
 

@@ -35,7 +35,7 @@ gems = %w[
   fastlane/plugin/appcenter
   fastlane/plugin/bugsnag
   fastlane/plugin/store_sizer
-  google/apis
+  google/apis/drive_v3
   google_drive
   highline
   htmlentities
@@ -54,6 +54,7 @@ gems = %w[
   rspec
   rubocop
   ruby-graphviz
+  zip
   slack-notifier
   slack-ruby-client
   tty-prompt
@@ -78,5 +79,5 @@ rescue NameError, ArgumentError => e
   failures << dep
 end
 
-warning 'Failed to log the following gems:'
+warning 'Failed to load the following gems:' unless failures.empty?
 failures.each { |gem| debug "  #{gem}" }

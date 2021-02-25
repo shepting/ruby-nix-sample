@@ -24,7 +24,7 @@ log
 
 log 'Checking all gems'
 gems = %w[
-  activesupport
+  active_support
   aws-sdk-s3
   buildkit
   cocoapods
@@ -32,10 +32,10 @@ gems = %w[
   dogapi
   faraday
   fastlane
-  fastlane-plugin-appcenter
-  fastlane-plugin-bugsnag
-  fastlane-plugin-store_sizer
-  google-api-client
+  fastlane/plugin/appcenter
+  fastlane/plugin/bugsnag
+  fastlane/plugin/store_sizer
+  google/apis
   google_drive
   highline
   htmlentities
@@ -54,7 +54,6 @@ gems = %w[
   rspec
   rubocop
   ruby-graphviz
-  rubyzip
   slack-notifier
   slack-ruby-client
   tty-prompt
@@ -62,8 +61,9 @@ gems = %w[
   vcr
   xcodeproj
   xcpretty
-  xml-simple
+  xmlsimple
   plist
+  zip
 ]
 failures = []
 # Load multiple dependencies from apps/Gemfile

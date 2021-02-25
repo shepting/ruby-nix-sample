@@ -1,5 +1,5 @@
 #
-# This file defines a set of dependencies for software development.
+# This file defines the dependencies for mobile development.
 # Adding new lines to buildInputs in pkgs.stdenv.mkDerivation will cause
 # them to be made available when `nix-shell default.nix` is run.
 #
@@ -21,17 +21,17 @@ let
 in
 
 pkgs.mkShell rec {
-  name = "dev-derivation";
-  version = "0.3.0";
+  name = "managed-tooling-shell";
+  version = "0.4.0";
   buildInputs = [
     # Ruby
     pkgs.bundix
     gems.wrappedRuby # Use the same Ruby as the gems use
 
     # Languages
-    pkgs.python3
-    pkgs.nodejs-12_x
-    pkgs.openjdk8
+    # pkgs.python3
+    # pkgs.nodejs-12_x
+    # pkgs.openjdk8
 
     # Nokogiri
     pkgs.libiconv
@@ -40,10 +40,12 @@ pkgs.mkShell rec {
     pkgs.zlib
 
     # Tools
-    pkgs.graphviz
-    pkgs.watchman
-    pkgs.git
-    pkgs.loc
-    pkgs.age
+    # pkgs.graphviz
+    # pkgs.watchman
+    # pkgs.git
+    # pkgs.loc
+    # pkgs.age
+    # pkgs.awscli2
+    # pkgs.shellcheck
     ];
 }

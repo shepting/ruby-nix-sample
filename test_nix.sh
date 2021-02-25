@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#! nix-shell -i bash default.nix
+#! nix-shell -i zsh default.nix
 #
 # This file is to be run to test our Nix setup on CI.
 # It's not using Ruby since that's part of what it needs to verify.

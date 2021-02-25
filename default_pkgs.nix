@@ -2,7 +2,6 @@
 # update here if needed.
 # builtins.trace "importing default_pkgs.nix" true
 
-
 let
     defaultPkgs = import <nixpkgs>{};
 in
@@ -10,12 +9,12 @@ in
     #   nix-prefetch-url --unpack https://github.com/<owner>/<repo>/archive/<rev>.tar.gz
     # In our case the values are:
     #   <owner>: NixOS
-    #   <repo>: nixpkgs-channels
-    #   <rev>: 22a3bf9fb9edad917fb6cd1066d58b5e426ee975
+    #   <repo>: nixpkgs
+    #   <rev>: 120a14e6aa32114ce561c4f051fa7438d4ed7bd9
     # so the command looks like:
-    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs-channels/archive/a45f68ccac476dc37ddf294530538f2f2cce5a92.tar.gz
+    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/120a14e6aa32114ce561c4f051fa7438d4ed7bd9.tar.gz
     import (defaultPkgs.fetchFromGitHub { owner = "NixOS";
-        repo = "nixpkgs-channels";
-        rev = "a45f68ccac476dc37ddf294530538f2f2cce5a92";
-        sha256 = "0i19mrky9m73i601hczyfk25qqyr3j75idb72imdz55szc4vavzc";
+        repo = "nixpkgs";
+        rev = "120a14e6aa32114ce561c4f051fa7438d4ed7bd9";
+        sha256 = "16gwjc44bwhiak2v6c4bbh5vg6lw2k8q8h5h2cqvpps5x68bmj65";
     }) {}

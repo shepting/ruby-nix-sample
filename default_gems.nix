@@ -3,9 +3,10 @@ let
 in
 
 pkgs.bundlerEnv {
-    name = "gems-bundler-env";
+    name = "bundler-env";
     gemfile = ./Gemfile;
     lockfile = ./Gemfile.lock;
     gemset = ./gemset.nix;
     ruby = pkgs.ruby;
+    copyGemFiles = true;
 }

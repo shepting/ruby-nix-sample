@@ -12,13 +12,14 @@ mkShell {
     gems
     gems.wrappedRuby
 
-    # bundix  # these two aren't as important because they aren't loaded into Ruby.
-    # bundler # You only use them to generate runtime / build files.
+    bundix  # these two aren't as important because they aren't loaded into Ruby.
+    bundler # You only use them to generate runtime / build files.
   ];
 
   shellHook = ''
-    echo Hello
-    which ruby
-    which rake
+    echo "Dev env:"
+    ruby --version
+    bundler --version
+    bundix --version
   '';
 }

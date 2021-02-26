@@ -3,11 +3,12 @@ let
   gems = bundlerEnv {
     name = "bnb-gems";
     gemdir = ./.;
+    copyGemFiles = true;
   };
 in
 
 mkShell {
-  name = "bnb-shell";
+  name = "managed-tooling-shell";
   buildInputs = [
     gems
     gems.wrappedRuby

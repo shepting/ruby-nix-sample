@@ -16,7 +16,5 @@ mkShell {
   shellHook = ''
     echo "Dev env:"
     ruby --version
-    bundler --version
-    bundix --version
   '';
 }

@@ -110,10 +110,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "01zlv2icx3m0pq94z9fcsp1r9ivdqhfpnpbrv63fpr6m7yqww24y";
+      sha256 = "1mzcf0p81mkimks7l1mqzkxwnjbsp5qsh07vvcb9i2199hf8yg63";
       type = "gem";
     };
-    version = "1.88.1";
+    version = "1.88.2";
   };
   aws-sigv4 = {
     dependencies = ["aws-eventstream"];

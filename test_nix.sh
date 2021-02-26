@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#! nix-shell -i zsh shell.nix
+#! nix-shell
 
 set -o errexit
 

@@ -1,10 +1,11 @@
 #!/usr/bin/env nix-shell
-#! nix-shell
+#! nix-shell -i bash shell.nix
 
 set -o errexit
 
 cd "$(dirname "$0")" # Run from the directory of this script
 
+echo "Testing Ruby imports."
 ruby test_import.rb
 
 # Test bundix install with bundle locks

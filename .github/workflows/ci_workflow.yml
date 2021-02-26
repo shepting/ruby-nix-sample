@@ -25,16 +25,14 @@ jobs:
       with:
         nix_path: nixpkgs=channel:nixos-unstable
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
+    - name: Install Nix packages
+      run: |
+        nix-shell -p bundix bundler --run 'bundle --version'
+        nix-shell --run 'echo "Inside Nix shell"'
+
+    - name: Test gemset update script
       run: ./update_gemset.sh
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
+    - name: Test Ruby loads
       run: ./test_nix.sh
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.

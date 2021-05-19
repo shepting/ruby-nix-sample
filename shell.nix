@@ -28,5 +28,6 @@ pkgs.mkShell {
   shellHook = ''
     echo "Dev env:"
     ruby --version
+    bundle --version
   '';
 }

@@ -5,10 +5,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1fvchp2rhp2rmigx7qglf69xvjqvzq7x0g49naliw29r2bz656sy";
+      sha256 = "022r3m9wdxljpbya69y2i3h9g3dhhfaqzidf95m6qjzms792jvgp";
       type = "gem";
     };
-    version = "2.7.0";
+    version = "2.8.0";
   };
   diff-lcs = {
     groups = ["default"];
@@ -21,15 +21,35 @@
     version = "1.4.4";
   };
   faraday = {
-    dependencies = ["faraday-excon" "faraday-net_http" "faraday-net_http_persistent" "multipart-post" "ruby2_keywords"];
+    dependencies = ["faraday-em_http" "faraday-em_synchrony" "faraday-excon" "faraday-httpclient" "faraday-net_http" "faraday-net_http_persistent" "faraday-patron" "faraday-rack" "multipart-post" "ruby2_keywords"];
     groups = ["default"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0q646m07lfahakx5jdq77j004rcgfj6lkg13c0f84993gi78dhvi";
+      sha256 = "0afhlqgby2cizcwgh7h2sq5f77q01axjbdl25bsvfwsry9n7gyyi";
       type = "gem";
     };
-    version = "1.4.1";
+    version = "1.8.0";
+  };
+  faraday-em_http = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "12cnqpbak4vhikrh2cdn94assh3yxza8rq2p9w2j34bqg5q4qgbs";
+      type = "gem";
+    };
+    version = "1.0.0";
+  };
+  faraday-em_synchrony = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1vgrbhkp83sngv6k4mii9f2s9v5lmp693hylfxp2ssfc60fas3a6";
+      type = "gem";
+    };
+    version = "1.0.0";
   };
   faraday-excon = {
     groups = ["default"];
@@ -40,6 +60,16 @@
       type = "gem";
     };
     version = "1.1.0";
+  };
+  faraday-httpclient = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0fyk0jd3ks7fdn8nv3spnwjpzx2lmxmg2gh4inz3by1zjzqg33sc";
+      type = "gem";
+    };
+    version = "1.0.1";
   };
   faraday-net_http = {
     groups = ["default"];
@@ -56,20 +86,40 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0l2c835wl7gv34xp49fhd1bl4czkpw2g3ahqsak2251iqv5589ka";
+      sha256 = "0dc36ih95qw3rlccffcb0vgxjhmipsvxhn6cw71l7ffs0f7vq30b";
       type = "gem";
     };
-    version = "1.1.0";
+    version = "1.2.0";
+  };
+  faraday-patron = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "19wgsgfq0xkski1g7m96snv39la3zxz6x7nbdgiwhg5v82rxfb6w";
+      type = "gem";
+    };
+    version = "1.0.0";
+  };
+  faraday-rack = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1h184g4vqql5jv9s9im6igy00jp6mrah2h14py6mpf9bkabfqq7g";
+      type = "gem";
+    };
+    version = "1.0.0";
   };
   multipart-post = {
     groups = ["default"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "09k0b3cybqilk1gwrwwain95rdypixb2q9w65gd44gfzsd84xi1x";
+      sha256 = "1zgw9zlwh2a6i1yvhhc4a84ry1hv824d6g2iw2chs3k5aylpmpfj";
       type = "gem";
     };
-    version = "2.0.0";
+    version = "2.1.1";
   };
   octokit = {
     dependencies = ["faraday" "sawyer"];
@@ -97,10 +147,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1iik52mf9ky4cgs38fp2m8r6skdkq1yz23vh18lk95fhbcxb6a67";
+      sha256 = "15whn7p9nrkxangbs9hh75q585yfn66lv0v2mhj6q6dl6x8bzr2w";
       type = "gem";
     };
-    version = "13.0.3";
+    version = "13.0.6";
   };
   rspec = {
     dependencies = ["rspec-core" "rspec-expectations" "rspec-mocks"];
@@ -161,10 +211,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "15wfcqxyfgka05v2a7kpg64x57gl1y4xzvnc9lh60bqx5sf1iqrs";
+      sha256 = "1vz322p8n39hz3b4a9gkmz9y7a5jaz41zrm2ywf31dvkqm03glgz";
       type = "gem";
     };
-    version = "0.0.4";
+    version = "0.0.5";
   };
   sawyer = {
     dependencies = ["addressable" "faraday"];

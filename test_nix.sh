@@ -18,13 +18,14 @@ ruby --version
 debug "$(which bundle)"
 bundle --version
 debug "$(which rake)"
-rake --version
+rake --version || true
+rake load_gem || true
 
 # Log version of Rake used in Nix shell
 echo
 echo "Rake shim:"
 function path () { echo "$PATH" | tr : '\n'; }
-debug "$(cat "$(path | grep rake)/rake")"
+debug "$(cat "$(which rake)")"
 echo
 
 # Log version of bundler used in Bundix

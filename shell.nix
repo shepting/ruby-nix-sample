@@ -19,8 +19,8 @@ pkgs.mkShell rec {
   name = "managed-tooling-shell";
   buildInputs = [
     pkgs.bundix
-    pkgs.rake
     gems.wrappedRuby # Use the same Ruby as our gems use
+    gems
     ];
   shellHook = ''
     echo "Starting Nix shell."

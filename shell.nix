@@ -1,21 +1,28 @@
-with import<nixpkgs>{};
+#
+# This is a sample shell.nix to show failures with Rake
+# when setting up a Ruby environment
+
 let
-  gems = bundlerEnv {
-    name = "bnb-gems";
+  # Pinned version of nixpkgs
+  pkgs = import ./default_pkgs.nix;
+
+  # Gems from gemset.nix built by Bundix
+  gems = pkgs.bundlerEnv {
+    name = "bundler-env";
     gemdir = ./.;
+    ruby = pkgs.ruby;
     copyGemFiles = true;
   };
 in
 
-mkShell {
+pkgs.mkShell rec {
   name = "managed-tooling-shell";
   buildInputs = [
-    gems
-    gems.wrappedRuby
-  ];
-
+    pkgs.bundix
+    pkgs.rake
+    gems.wrappedRuby # Use the same Ruby as our gems use
+    ];
   shellHook = ''
-    echo "Dev env:"
-    ruby --version
+    echo "Starting Nix shell."
   '';
 }

@@ -1,33 +1,28 @@
+#
+# This is a sample shell.nix to show failures with Rake
+# when setting up a Ruby environment
 
 let
-  pkgs = import <nixpkgs> { overlays = [
-    (self: super: {
-      bundler = self.callPackage ./bundler.nix {};
-    })
-    ];};
+  # Pinned version of nixpkgs
+  pkgs = import ./default_pkgs.nix;
+
+  # Gems from gemset.nix built by Bundix
   gems = pkgs.bundlerEnv {
-    name = "bnb-gems";
+    name = "bundler-env";
     gemdir = ./.;
+    ruby = pkgs.ruby;
     copyGemFiles = true;
   };
 in
 
-pkgs.mkShell {
+pkgs.mkShell rec {
   name = "managed-tooling-shell";
   buildInputs = [
-    # Uses new version of Bundler from overlay
     pkgs.bundix
-
-    # Gems from Bundix
-    gems
-
-    # Version of Ruby that matches the Gems
-    gems.wrappedRuby
-  ];
-
+    pkgs.rake
+    gems.wrappedRuby # Use the same Ruby as our gems use
+    ];
   shellHook = ''
-    echo "Dev env:"
-    ruby --version
-    bundle --version
+    echo "Starting Nix shell."
   '';
 }

@@ -10,8 +10,21 @@ function debug () {
     echo -e "${DIM}$1${NC}"
 }
 
-
 cd "$(dirname "$0")" # Run from the directory of this script
+
+
+debug "$(which ruby)"
+ruby --version
+debug "$(which bundle)"
+bundle --version
+debug "$(which rake)"
+
+# Log version of Rake used in Nix shell
+echo
+echo "Inspect Rake shim:"
+function path () { echo "$PATH" | tr : '\n'; }
+debug "$(cat "$(path | grep rake)/rake")"
+echo
 
 # Log version of bundler used in Bundix
 echo

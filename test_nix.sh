@@ -19,6 +19,7 @@ debug "$(which bundle)"
 bundle --version
 debug "$(which rake)"
 rake --version || true
+rake load_gem || true
 
 # Log version of Rake used in Nix shell
 echo

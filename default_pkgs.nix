@@ -12,12 +12,12 @@ in
     #   <repo>: nixpkgs
     #   <rev>: 69014d1d7cf3808987e17b9653c095bbd8ca788a
     # so the command looks like:
-    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/69014d1d7cf3808987e17b9653c095bbd8ca788a.tar.gz
+    #   nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/1857bae31011d823bb0f4a0349a28d2aab2b7279.tar.gz
     import (defaultPkgs.fetchFromGitHub { owner = "NixOS";
         repo = "nixpkgs";
-        rev = "69014d1d7cf3808987e17b9653c095bbd8ca788a";
-        sha256 = "1476lbxgr8563wzamkzy89rq8rcnny1dpi76d1khhq2l7ff2lkxd";
+        rev = "1857bae31011d823bb0f4a0349a28d2aab2b7279";
+        sha256 = "1n42ik5h3373lrxswzdgmpnnix6f5k1aga6hdqs30p668b77mi8h";
     }) {}
 
 
-    # nix-prefetch-url --unpack https://github.com/NixOS/nixpkgs/archive/1857bae31011d823bb0f4a0349a28d2aab2b7279.tar.gz
+

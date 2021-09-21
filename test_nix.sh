@@ -18,17 +18,18 @@ ruby --version
 debug "$(which bundle)"
 bundle --version
 debug "$(which rake)"
+rake --version
 
 # Log version of Rake used in Nix shell
 echo
-echo "Inspect Rake shim:"
+echo "Rake shim:"
 function path () { echo "$PATH" | tr : '\n'; }
 debug "$(cat "$(path | grep rake)/rake")"
 echo
 
 # Log version of bundler used in Bundix
 echo
-echo "Inspect Bundix paths to see Bundler version"
+echo "Bundix shim"
 function path () { echo "$PATH" | tr : '\n'; }
 debug "$(cat "$(path | grep bundix)/bundix")"
 echo
